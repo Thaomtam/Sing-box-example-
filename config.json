@@ -1,0 +1,31 @@
+{
+  "inbounds": [
+    {
+      "type": "vless",
+      "listen": "127.0.0.1",
+      "listen_port": 8001,
+      "sniff": true,
+      "users": [
+        {
+          "uuid": "thoitiet"
+        }
+      ],
+      "multiplex": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/gists/cache",
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "headers": {
+          "Host": "thoitiet.com"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct"
+    }
+  ]
+}
